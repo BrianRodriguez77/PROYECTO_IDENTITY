@@ -10,3 +10,6 @@ Route::get('/prueba', function () {
     return '¡Ruta de prueba funcionando!';
 });
 
+use App\Http\Controllers\AlumnoController;
+
+Route::get('/alumnos', [AlumnoController::class, 'index'])->name('alumnos.index');
